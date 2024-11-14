@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllatokListajaComponent } from './allatok-listaja/allatok-listaja.component';
 import { AllatReszleteiComponent } from './allat-reszletei/allat-reszletei.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AllatReszleteiComponent } from './allat-reszletei/allat-reszletei.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

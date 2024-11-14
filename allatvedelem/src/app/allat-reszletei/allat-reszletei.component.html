@@ -1,1 +1,8 @@
-<p>allat-reszletei works!</p>
+<div *ngIf="allat">
+    <h2>{{ allat.nev }} - {{ allat.faj }}</h2>
+    <p>Kor: {{ allat.kor }} év</p>
+    <p>Leírás: {{ allat.leiras }}</p>
+    <p>{{ allat.orokbefogadhato ? 'Örökbefogadható' : 'Nem örökbefogadható' }}</p>
+    <button (click)="vissza()">Vissza a listához</button>
+  </div>
+  

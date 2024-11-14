@@ -1,1 +1,14 @@
-<p>allatok-listaja works!</p>
+<div>
+    <label for="fajValaszto">Szűrés faj szerint:</label>
+    <select id="fajValaszto" [(ngModel)]="kivantFaj" (change)="szurFajSzerint()">
+      <option value="">Összes</option>
+      <option *ngFor="let faj of fajok" [value]="faj">{{ faj }}</option>
+    </select>
+  </div>
+  
+  <div *ngFor="let allat of szurtAllatok" [ngClass]="{'adoptable': allat.orokbefogadhato}">
+    <h3>{{ allat.nev }} - {{ allat.faj }}</h3>
+    <p>{{ allat.leiras }} ({{ allat.orokbefogadhato ? 'Örökbefogadható' : 'Nem örökbefogadható' }})</p>
+    <button (click)="reszletek(allat.id)">Részletek</button>
+  </div>
+  
